@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Filter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+    }
+    select {
+      margin-bottom: 15px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Shop Items</h2>
+  <label for="categoryFilter">Choose Category:</label>
+  <select id="categoryFilter">
+    <option value="all">Show All</option>
+    <option value="tech">Tech Gadgets</option>
+    <option value="apparel">Apparel</option>
+  </select>
+
+  <div id="itemsContainer"></div>
+
+  <script>
+    const items = [
+      { name: "Smartphone", category: "tech", price: 750 },
+      { name: "Sneakers", category: "apparel", price: 60 },
+      { name: "Tablet", category: "tech", price: 450 },
+      { name: "Jacket", category: "apparel", price: 120 }
+    ];
+
+    const dropdown = document.getElementById('categoryFilter');
+    const container = document.getElementById('itemsContainer');
+
+    dropdown.addEventListener('change', function() {
+      const chosen = this.value;
+      const visibleItems = chosen === 'all' ? items : items.filter(item => item.category === chosen);
+      showItems(visibleItems);
+    });
+
+    function showItems(list) {
+      container.innerHTML = list.map(item => `
+        <div class="item">
+          <h3>${item.name}</h3>
+          <p>Price: $${item.price}</p>
+        </div>
+      `).join('');
+    }
+
+    showItems(items);
+  </script>
+
+</body>
+</html>

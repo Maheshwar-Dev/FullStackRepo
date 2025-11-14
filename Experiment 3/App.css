@@ -1,0 +1,139 @@
+/* Page basics */
+body {
+  background: #f3f4f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.container {
+  max-width: 650px;
+  margin: 25px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.container form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.container input[type="text"] {
+  flex: 1;
+  padding: 9px 12px;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.container input[type="text"]:focus {
+  border-color: #4a74f5;
+  box-shadow: 0 0 5px rgba(74, 116, 245, 0.3);
+}
+
+.container button {
+  padding: 10px 14px;
+  border: none;
+  background: #4a74f5;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background: #345ae0;
+}
+
+/* Search bar */
+.search-box {
+  width: 100%;
+  padding: 9px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+/* Book list styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual book card */
+.book-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.book-card:hover {
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+}
+
+/* Book text */
+.book-card strong {
+  font-size: 17px;
+  color: #222;
+}
+
+.book-card p {
+  margin: 3px 0 0;
+  color: #555;
+}
+
+/* Buttons */
+.actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #ffe28a;
+}
+
+.edit-btn:hover {
+  background: #ffd96b;
+}
+
+.delete-btn {
+  background: #ff7b7b;
+  margin-left: 6px;
+}
+
+.delete-btn:hover {
+  background: #ff5c5c;
+}
+
+/* Icons */
+.book-icon {
+  width: 60px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
